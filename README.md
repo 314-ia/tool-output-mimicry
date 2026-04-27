@@ -92,6 +92,7 @@ Tool Output Mimicry is a refinement of indirect prompt injection (Greshake et al
   author       = {Brana, Juan Pablo},
   title        = {Tool Output Mimicry: Bypassing Multi-Layer Agentic AI Defenses via Upstream-Agent Impersonation in User-Controlled Fields},
   year         = {2026},
+  institution  = {i-314 Research Lab},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19794072},
   url          = {https://doi.org/10.5281/zenodo.19794072}

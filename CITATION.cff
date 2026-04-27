@@ -6,7 +6,7 @@ authors:
   - family-names: "Brana"
     given-names: "Juan Pablo"
     email: "juan.brana@i-314.com"
-    affiliation: "i-314 Security Research"
+    affiliation: "i-314 Research Lab"
 repository-code: "https://github.com/314-ia/tool-output-mimicry"
 url: "https://github.com/314-ia/tool-output-mimicry"
 license: MIT
@@ -25,7 +25,7 @@ preferred-citation:
     - family-names: "Brana"
       given-names: "Juan Pablo"
       email: "juan.brana@i-314.com"
-      affiliation: "i-314 Security Research"
+      affiliation: "i-314 Research Lab"
   year: 2026
   month: 4
   publisher:
