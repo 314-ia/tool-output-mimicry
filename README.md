@@ -3,7 +3,8 @@
 [![ci](https://github.com/314-ia/tool-output-mimicry/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/314-ia/tool-output-mimicry/actions/workflows/ci.yml)
 [![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19794072.svg)](https://doi.org/10.5281/zenodo.19794072)
+[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.19794072-blue.svg)](https://doi.org/10.5281/zenodo.19794072)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19826743.svg)](https://doi.org/10.5281/zenodo.19826743)
 [![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/314-ia/tool-output-mimicry/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/314-ia/tool-output-mimicry)
 
 > Independent research by [i-314 Security Research](https://i-314.com). **Not an OWASP project; not endorsed by or affiliated with the OWASP Foundation or the OWASP GenAI Security Project.** The OWASP FinBot CTF is referenced solely as the validation target — see [Acknowledgments](#acknowledgments).
@@ -88,6 +89,8 @@ Tool Output Mimicry is a refinement of indirect prompt injection (Greshake et al
 
 ## Citation
 
+If you cite the **technique** (the primitive itself, the threat model, the empirical claim), cite the paper:
+
 ```bibtex
 @misc{brana2026toolmimicry,
   author       = {Brana, Juan Pablo},
@@ -98,6 +101,22 @@ Tool Output Mimicry is a refinement of indirect prompt injection (Greshake et al
   doi          = {10.5281/zenodo.19794072},
   url          = {https://doi.org/10.5281/zenodo.19794072},
   note         = {Lab homepage: \url{https://i-314.com}}
+}
+```
+
+If you cite the **software** (this reproducer, a specific version of the code), cite the software record:
+
+```bibtex
+@software{brana2026toolmimicry_software,
+  author       = {Brana, Juan Pablo},
+  title        = {Tool Output Mimicry — Reference Reproducer},
+  year         = {2026},
+  institution  = {i-314 Research Lab},
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.19826743},
+  url          = {https://doi.org/10.5281/zenodo.19826743},
+  note         = {Concept-DOI; resolves to the latest software version. Version-DOI for v0.1.0 is 10.5281/zenodo.19826744.}
 }
 ```
 

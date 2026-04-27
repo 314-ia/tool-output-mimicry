@@ -37,6 +37,12 @@ preferred-citation:
   license: "CC-BY-4.0"
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.19826743"
+    description: "Concept-DOI of this software (resolves to the latest released version)"
+  - type: doi
+    value: "10.5281/zenodo.19826744"
+    description: "Version-DOI of software v0.1.0 (Zenodo archive of GitHub release v0.1.0)"
+  - type: doi
     value: "10.5281/zenodo.19794071"
     description: "Concept-DOI of the paper introducing the primitive (resolves to latest version)"
   - type: doi
