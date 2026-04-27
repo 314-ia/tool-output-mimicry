@@ -3,7 +3,7 @@ title: "Tool Output Mimicry — Reference Reproducer"
 message: "If you use this software, please cite both the software and the paper that introduces the primitive."
 type: software
 authors:
-  - family-names: "Braña"
+  - family-names: "Brana"
     given-names: "Juan Pablo"
     email: "juan.brana@i-314.com"
     affiliation: "i-314 Security Research"
@@ -22,7 +22,7 @@ preferred-citation:
   type: article
   title: "Tool Output Mimicry: Bypassing Multi-Layer Agentic AI Defenses via Upstream-Agent Impersonation in User-Controlled Fields"
   authors:
-    - family-names: "Braña"
+    - family-names: "Brana"
       given-names: "Juan Pablo"
       email: "juan.brana@i-314.com"
       affiliation: "i-314 Security Research"
