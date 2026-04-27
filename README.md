@@ -45,13 +45,13 @@ A second-target reproducer is planned for paper v1.1 (target TBD; candidates lis
 
 ## Install
 
-From PyPI:
+Install directly from this Git repository:
 
 ```bash
-pip install tool-output-mimicry
+pip install git+https://github.com/314-ia/tool-output-mimicry
 ```
 
-From source (for hacking / contributing):
+Or clone for hacking / contributing:
 
 ```bash
 git clone https://github.com/314-ia/tool-output-mimicry
@@ -59,7 +59,9 @@ cd tool-output-mimicry
 pip install -e ".[test]"
 ```
 
-The distribution name on PyPI is `tool-output-mimicry`; the importable Python package is `tom_repro` (intentional short alias, same pattern as `pip install scikit-learn` → `import sklearn`).
+The importable Python package is `tom_repro` (intentional short alias for *Tool Output Mimicry reproducer*, same pattern as `import sklearn` from `scikit-learn`).
+
+> **Note on PyPI:** This package is intentionally not published on PyPI. The PyPI [Acceptable Use Policy](https://policies.python.org/pypi.org/Acceptable-Use-Policy/) excludes "dual-use content, including content that is used for research into vulnerabilities, malware, or exploits, including bug bounties." This reproducer is exactly that kind of dual-use research artefact, so we distribute via Git + Zenodo + Software Heritage instead — the canonical academic publication path. Distribution channels other than PyPI (apt, npm, Docker, etc.) may be added later if community demand materialises and they have a more permissive policy for security research.
 
 ## Usage
 
