@@ -95,7 +95,8 @@ Tool Output Mimicry is a refinement of indirect prompt injection (Greshake et al
   institution  = {i-314 Research Lab},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19794072},
-  url          = {https://doi.org/10.5281/zenodo.19794072}
+  url          = {https://doi.org/10.5281/zenodo.19794072},
+  note         = {Lab homepage: \url{https://i-314.com}}
 }
 ```
 

@@ -7,6 +7,7 @@ authors:
     given-names: "Juan Pablo"
     email: "juan.brana@i-314.com"
     affiliation: "i-314 Research Lab"
+    website: "https://i-314.com"
 repository-code: "https://github.com/314-ia/tool-output-mimicry"
 url: "https://github.com/314-ia/tool-output-mimicry"
 license: MIT
@@ -26,6 +27,7 @@ preferred-citation:
       given-names: "Juan Pablo"
       email: "juan.brana@i-314.com"
       affiliation: "i-314 Research Lab"
+      website: "https://i-314.com"
   year: 2026
   month: 4
   publisher:
