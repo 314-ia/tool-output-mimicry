@@ -6,15 +6,19 @@ Reference implementation of **Tool Output Mimicry** — a primitive that bypasse
 
 ## Status
 
-**Work in progress.** This repository will host the reproducer for the OWASP FinBot CTF *fine-print* challenge described in the paper. Initial release expected within days of paper publication.
+**Live capture re-validated 2026-04-27** against a freshly-registered OWASP FinBot CTF account: see [`evidence/finbot_capture_20260427.log`](evidence/finbot_capture_20260427.log). The detector emitted a `completed` state after a single attempt with the exact `$8,000` overpayment against a `$5,000` invoice the paper describes.
 
-## What this will contain
+The live runner code is being packaged into this repository in stages. The discovery process — including two material schema changes the FinBot deployment underwent between the original capture and this re-validation — is logged in [`docs/discovery_log.md`](docs/discovery_log.md).
 
-- `src/` — Python implementation of the Tool Output Mimicry primitive
-- `targets/` — Target adapters (FinBot first; second-target reproduction planned for paper v1.1)
-- `payloads/` — Reusable mimicry templates from the paper appendix
-- `tests/` — Smoke tests and reproduction validation
-- `docs/` — Step-by-step reproduction guide
+## Layout (in progress)
+
+- `evidence/` — verbatim capture transcripts from live target runs
+- `docs/` — discovery log, reproduction guide
+- `src/` *(pending)* — packaged primitive (`UpstreamAgentImpersonation`, `generate_stego_html`)
+- `scripts/` *(pending)* — CLI runner and dry-run smoke test
+- `tests/` *(pending)* — primitive composition checks
+
+A second-target reproducer is planned for paper v1.1 (target TBD; candidates listed in the paper §VII).
 
 ## Background
 
