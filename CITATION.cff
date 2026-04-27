@@ -42,3 +42,6 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.19794072"
     description: "Version-DOI of paper v1.0"
+  - type: swh
+    value: "swh:1:snp:4544ea40cf1ad016809348b497860c5c2316bc60"
+    description: "Software Heritage snapshot (2026-04-27 archive of repo at commit d98f447)"

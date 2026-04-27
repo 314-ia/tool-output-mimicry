@@ -4,6 +4,7 @@
 [![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19794072.svg)](https://doi.org/10.5281/zenodo.19794072)
+[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/314-ia/tool-output-mimicry/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/314-ia/tool-output-mimicry)
 
 > Independent research by [i-314 Security Research](https://i-314.com). **Not an OWASP project; not endorsed by or affiliated with the OWASP Foundation or the OWASP GenAI Security Project.** The OWASP FinBot CTF is referenced solely as the validation target — see [Acknowledgments](#acknowledgments).
 
