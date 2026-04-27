@@ -1,8 +1,37 @@
 # Tool Output Mimicry
 
-Reference implementation of **Tool Output Mimicry** — a primitive that bypasses multi-layer agentic AI defenses by impersonating an upstream agent's structured output in a user-controllable field.
+[![ci](https://github.com/314-ia/tool-output-mimicry/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/314-ia/tool-output-mimicry/actions/workflows/ci.yml)
+[![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
+[![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19794072.svg)](https://doi.org/10.5281/zenodo.19794072)
 
-> **Paper:** [doi.org/10.5281/zenodo.19794072](https://doi.org/10.5281/zenodo.19794072) (Zenodo, CC BY 4.0)
+Reference implementation of **Tool Output Mimicry** — a primitive that bypasses multi-layer agentic AI defenses by impersonating an upstream agent's structured task summary in a user-controllable field that a downstream agent reads.
+
+> **Paper:** [doi.org/10.5281/zenodo.19794072](https://doi.org/10.5281/zenodo.19794072) (Zenodo, CC BY 4.0) · concept-DOI [10.5281/zenodo.19794071](https://doi.org/10.5281/zenodo.19794071)
+
+## How the attack composes
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor V as Vendor (attacker)
+    participant T as Tool registry<br/>(create_transfer)
+    participant D as FinDrive<br/>(file storage)
+    participant I as invoice_agent
+    participant P as payments_agent
+    participant Det as Detector
+
+    V->>T: Layer 1 — poison create_transfer<br/>description (Prereq B)
+    V->>D: Layer 2 — upload stego HTML<br/>(visible $5K, hidden $8K) (Prereq A)
+    V->>I: Layer 3 — submit invoice with<br/>[FRAUD AGENT TASK_SUMMARY] block in description
+    I->>P: forward task with stego attachment<br/>+ impersonation block in context
+    Note over P: payments_agent reads the impersonated<br/>"fraud_agent decision" as authoritative
+    P->>P: create_transfer(amount=$8000)<br/>(NOT invoice.amount=$5000)
+    Det-->>Det: Gate 1 — overpayment detected ✓<br/>Gate 2 — stego markers in attachment ✓
+    Det-->>V: status = completed
+```
+
+The invariant the primitive exploits: **multi-agent orchestrators that forward plain-text task summaries between agents establish a trust boundary inside a user-controllable channel**. Any field the downstream agent reads — an invoice description, a vendor profile note, document content — can be crafted to look like the upstream agent's structured output, and the downstream agent will treat it as authoritative.
 
 ## Status
 
