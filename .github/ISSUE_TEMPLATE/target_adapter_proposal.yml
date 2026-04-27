@@ -1,0 +1,74 @@
+name: Target adapter proposal
+description: Propose a new target adapter (e.g. LangGraph, AutoGen, CrewAI demo).
+title: "[adapter] "
+labels: ["adapter-proposal", "help-wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New adapters are the highest-value contribution this project can
+        receive — they extend the empirical evidence beyond the current n=1
+        (FinBot only) baseline. Please scope your proposal here before
+        opening a draft PR; we will discuss the contract and the
+        authorisation story before code lands.
+
+        See [CONTRIBUTING.md](https://github.com/314-ia/tool-output-mimicry/blob/main/CONTRIBUTING.md)
+        for the adapter shape (`dry_run`, `run_attack`, `cli_entry`).
+
+  - type: input
+    id: target_name
+    attributes:
+      label: Target name
+      placeholder: "e.g. langgraph_finance_demo, autogen_payment_chain"
+    validations:
+      required: true
+
+  - type: input
+    id: target_url
+    attributes:
+      label: Public reference for the target
+      description: Link to the upstream repo, demo, or platform homepage.
+    validations:
+      required: true
+
+  - type: textarea
+    id: threat_model_fit
+    attributes:
+      label: Why this target fits the threat model
+      description: |
+        The primitive requires: (1) multi-agent orchestrator, (2) plain-text
+        task-summary forwarding between agents, (3) a downstream agent that
+        reads a user-controllable field and (4) has tool access. Briefly
+        confirm each.
+    validations:
+      required: true
+
+  - type: textarea
+    id: authorisation
+    attributes:
+      label: Authorisation to test
+      description: |
+        Per SECURITY.md, you must own the target or have explicit
+        authorisation. State which applies and how it is documented (CTF
+        terms of use, bug-bounty scope, ownership, etc.).
+    validations:
+      required: true
+
+  - type: textarea
+    id: planned_evidence
+    attributes:
+      label: Planned evidence artefact
+      description: |
+        What would the verbatim capture transcript look like in
+        `evidence/<target>_capture_<YYYYMMDD>.log`? Outline the steps the
+        adapter would print and what success signal the target emits.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I have read CONTRIBUTING.md and SECURITY.md.
+          required: true
+        - label: I understand the adapter must include a `dry_run()` path that exits 0 with zero credentials and zero network.
+          required: true

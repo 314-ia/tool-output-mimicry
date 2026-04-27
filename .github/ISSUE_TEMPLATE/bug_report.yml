@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a defect in the reproducer code or its CI.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please confirm the bug is in *this repository's
+        code* — not in the OWASP FinBot CTF target or in the underlying
+        primitive itself. For target-platform issues, file with the FinBot
+        maintainers; for primitive-level critique, please cite the paper
+        (`doi:10.5281/zenodo.19794072`) and open a discussion instead.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: |
+        The minimum command sequence to trigger the bug. Include Python
+        version (`python --version`) and platform.
+      placeholder: |
+        1. python -m venv .venv
+        2. .venv/bin/pip install -e ".[test]"
+        3. .venv/bin/tom-repro-finbot --dry-run
+        4. (observed wrong behaviour here)
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. actual
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: |
+        - Python version:
+        - OS:
+        - tom-repro version (`pip show tom-repro`):
+        - Output of `pip freeze | grep -i httpx` if relevant:
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I confirm this bug is in the *reproducer code*, not in the FinBot CTF target.
+          required: true
+        - label: I am NOT reporting a security vulnerability (those go to SECURITY.md).
+          required: true
+        - label: I have run `tom-repro-finbot --dry-run` and the failure is reproducible.
+          required: false

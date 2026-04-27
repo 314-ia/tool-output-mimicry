@@ -5,6 +5,8 @@
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19794072.svg)](https://doi.org/10.5281/zenodo.19794072)
 
+> Independent research by [i-314 Security Research](https://i-314.com). **Not an OWASP project; not endorsed by or affiliated with the OWASP Foundation or the OWASP GenAI Security Project.** The OWASP FinBot CTF is referenced solely as the validation target — see [Acknowledgments](#acknowledgments).
+
 Reference implementation of **Tool Output Mimicry** — a primitive that bypasses multi-layer agentic AI defenses by impersonating an upstream agent's structured task summary in a user-controllable field that a downstream agent reads.
 
 > **Paper:** [doi.org/10.5281/zenodo.19794072](https://doi.org/10.5281/zenodo.19794072) (Zenodo, CC BY 4.0) · concept-DOI [10.5281/zenodo.19794071](https://doi.org/10.5281/zenodo.19794071)
@@ -95,6 +97,17 @@ Tool Output Mimicry is a refinement of indirect prompt injection (Greshake et al
   url          = {https://doi.org/10.5281/zenodo.19794072}
 }
 ```
+
+## Contributing & security
+
+- **New target adapters** are the most-wanted contribution — see [CONTRIBUTING.md](CONTRIBUTING.md) for the adapter contract and conventions.
+- **Vulnerability disclosure** (in this code, or vulnerabilities discovered using the primitive) — see [SECURITY.md](SECURITY.md) for scope, authorised-use checklist, and the dual-track disclosure process.
+
+## Acknowledgments
+
+This work would not have been possible without the [**OWASP FinBot CTF**](https://github.com/GenAI-Security-Project/finbot-ctf) — the public agentic-AI security training platform that served as the validation target for this primitive. Particular thanks to **Helen Oakley** (creator; Co-lead, OWASP Agentic Security Initiative) and **John Sotiropoulos** (Co-lead, OWASP Agentic Security Initiative) for designing and operating the platform on which the original capture (April 2026) and the post-publication re-validation (2026-04-27) were both performed, and to the broader [OWASP GenAI Security Project](https://genai.owasp.org/) community for the public discussion that refined the framing of the primitive.
+
+The primitive itself is a refinement of indirect prompt injection (Greshake et al., 2023) for the inter-agent trust boundary — see the paper's references for the full intellectual lineage.
 
 ## License
 

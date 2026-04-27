@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: https://github.com/314-ia/tool-output-mimicry/security/advisories/new
+    about: |
+      Please do not file vulnerabilities as public issues. Use a private
+      security advisory, or email juan.brana@i-314.com with subject prefix
+      [security]. Coordinated disclosure terms are documented in SECURITY.md.
+  - name: Read the paper
+    url: https://doi.org/10.5281/zenodo.19794072
+    about: |
+      Most "how does the primitive work" questions are answered in the
+      paper. Please skim it before opening a question issue.

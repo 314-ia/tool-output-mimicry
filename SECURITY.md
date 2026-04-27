@@ -1,5 +1,7 @@
 # Security policy
 
+> **Affiliation note.** This is independent research by [i-314 Security Research](https://i-314.com). It is not an OWASP project and has no formal endorsement from the OWASP Foundation or the OWASP GenAI Security Project. The OWASP FinBot CTF is referenced as the validation target only.
+
 ## Scope and intent
 
 This repository contains a **defensive-research artefact**: the
