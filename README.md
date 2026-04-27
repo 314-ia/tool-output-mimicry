@@ -6,19 +6,47 @@ Reference implementation of **Tool Output Mimicry** — a primitive that bypasse
 
 ## Status
 
-**Live capture re-validated 2026-04-27** against a freshly-registered OWASP FinBot CTF account: see [`evidence/finbot_capture_20260427.log`](evidence/finbot_capture_20260427.log). The detector emitted a `completed` state after a single attempt with the exact `$8,000` overpayment against a `$5,000` invoice the paper describes.
-
-The live runner code is being packaged into this repository in stages. The discovery process — including two material schema changes the FinBot deployment underwent between the original capture and this re-validation — is logged in [`docs/discovery_log.md`](docs/discovery_log.md).
-
-## Layout (in progress)
-
-- `evidence/` — verbatim capture transcripts from live target runs
-- `docs/` — discovery log, reproduction guide
-- `src/` *(pending)* — packaged primitive (`UpstreamAgentImpersonation`, `generate_stego_html`)
-- `scripts/` *(pending)* — CLI runner and dry-run smoke test
-- `tests/` *(pending)* — primitive composition checks
+**Live capture re-validated 2026-04-27** against a freshly-registered OWASP FinBot CTF account: see [`evidence/finbot_capture_20260427.log`](evidence/finbot_capture_20260427.log). The detector emitted a `completed` state after a single attempt with the exact `$8,000` overpayment against a `$5,000` invoice the paper describes. The discovery narrative — including two material schema changes the FinBot deployment underwent between the original capture and this re-validation — is in [`docs/discovery_log.md`](docs/discovery_log.md).
 
 A second-target reproducer is planned for paper v1.1 (target TBD; candidates listed in the paper §VII).
+
+## Install
+
+```bash
+pip install -e .
+# Optional: pytest deps for the structural smoke tests
+pip install -e ".[test]"
+```
+
+## Usage
+
+### Offline composition check (no credentials, no network)
+
+```bash
+tom-repro-finbot --dry-run
+```
+
+Prints the rendered impersonation block, the stego HTML attachment, and confirms each Gate-2 detector regex matches. Exits `0` on PASS, `2` on structural failure. This is the canonical CI smoke test.
+
+### Live capture against the OWASP FinBot CTF
+
+You need an account at <https://owasp-finbot-ctf.org>. Read your `finbot_session` cookie value from the browser; the CSRF token and a vendor will be auto-bootstrapped from your session.
+
+```bash
+export FINBOT_COOKIE='<your finbot_session value>'
+tom-repro-finbot
+```
+
+You can also pass `--csrf` and `--vendor-id` explicitly to skip the bootstrap step. Successful capture exits `0` and prints the FinBot detector's evidence dict.
+
+## Layout
+
+- `src/tom_repro/primitive.py` — `UpstreamAgentImpersonation`, `ToolOutputMimicry`
+- `src/tom_repro/stego.py` — `generate_stego_html`, `STEGO_CSS_MARKERS`
+- `src/tom_repro/targets/finbot.py` — OWASP FinBot CTF target driver
+- `tests/` — offline structural tests (24 cases, no network)
+- `evidence/` — verbatim capture transcripts from live target runs
+- `docs/` — discovery log
 
 ## Background
 
