@@ -39,9 +39,9 @@ Usage
     tom-repro-finbot --dry-run
 
     # Live capture against the user's CTF account:
-    export FINBOT_COOKIE='IlKzdh...'         # finbot_session cookie value
-    export FINBOT_CSRF='Tv6Uv5...'            # csrf-token meta content
-    export FINBOT_VENDOR_ID=1257              # OR omit to auto-onboard
+    export FINBOT_COOKIE='<your finbot_session cookie value>'
+    export FINBOT_CSRF='<csrf-token from any authenticated page>'
+    export FINBOT_VENDOR_ID=42      # OR omit to auto-onboard
     tom-repro-finbot
 
 Exit codes
