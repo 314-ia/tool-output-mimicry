@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tom-repro"
+version = "0.1.0"
+description = "Reference reproducer for the Tool Output Mimicry primitive (Braña 2026, doi:10.5281/zenodo.19794072)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Juan Pablo Braña", email = "juan.brana@i-314.com" },
+]
+keywords = [
+    "ai-security",
+    "agentic-ai",
+    "prompt-injection",
+    "multi-agent",
+    "owasp",
+    "ctf",
+    "reproducer",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+pdf = ["reportlab>=4.0"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/314-ia/tool-output-mimicry"
+Paper = "https://doi.org/10.5281/zenodo.19794072"
+Issues = "https://github.com/314-ia/tool-output-mimicry/issues"
+Author = "https://i-314.com"
+
+[project.scripts]
+tom-repro-finbot = "tom_repro.targets.finbot:cli_entry"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

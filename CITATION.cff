@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "Tool Output Mimicry — Reference Reproducer"
+message: "If you use this software, please cite both the software and the paper that introduces the primitive."
+type: software
+authors:
+  - family-names: "Braña"
+    given-names: "Juan Pablo"
+    email: "juan.brana@i-314.com"
+    affiliation: "i-314 Security Research"
+repository-code: "https://github.com/314-ia/tool-output-mimicry"
+url: "https://github.com/314-ia/tool-output-mimicry"
+license: MIT
+version: "0.1.0"
+date-released: "2026-04-27"
+keywords:
+  - "agentic AI security"
+  - "prompt injection"
+  - "multi-agent orchestration"
+  - "tool output mimicry"
+  - "OWASP"
+preferred-citation:
+  type: article
+  title: "Tool Output Mimicry: Bypassing Multi-Layer Agentic AI Defenses via Upstream-Agent Impersonation in User-Controlled Fields"
+  authors:
+    - family-names: "Braña"
+      given-names: "Juan Pablo"
+      email: "juan.brana@i-314.com"
+      affiliation: "i-314 Security Research"
+  year: 2026
+  month: 4
+  publisher:
+    name: "Zenodo"
+  doi: "10.5281/zenodo.19794072"
+  url: "https://doi.org/10.5281/zenodo.19794072"
+  license: "CC-BY-4.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19794071"
+    description: "Concept-DOI of the paper introducing the primitive (resolves to latest version)"
+  - type: doi
+    value: "10.5281/zenodo.19794072"
+    description: "Version-DOI of paper v1.0"
