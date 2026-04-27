@@ -45,11 +45,21 @@ A second-target reproducer is planned for paper v1.1 (target TBD; candidates lis
 
 ## Install
 
+From PyPI:
+
 ```bash
-pip install -e .
-# Optional: pytest deps for the structural smoke tests
+pip install tool-output-mimicry
+```
+
+From source (for hacking / contributing):
+
+```bash
+git clone https://github.com/314-ia/tool-output-mimicry
+cd tool-output-mimicry
 pip install -e ".[test]"
 ```
+
+The distribution name on PyPI is `tool-output-mimicry`; the importable Python package is `tom_repro` (intentional short alias, same pattern as `pip install scikit-learn` → `import sklearn`).
 
 ## Usage
 

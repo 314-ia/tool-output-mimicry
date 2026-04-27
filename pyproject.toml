@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tom-repro"
+name = "tool-output-mimicry"
 version = "0.1.0"
-description = "Reference reproducer for the Tool Output Mimicry primitive (Brana 2026, doi:10.5281/zenodo.19794072)."
+description = "Reference reproducer for the Tool Output Mimicry primitive (Brana 2026, doi:10.5281/zenodo.19794072) — bypasses multi-layer agentic AI defenses via upstream-agent impersonation in user-controllable fields."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
